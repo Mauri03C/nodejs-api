@@ -1,0 +1,146 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #005f99, #00aaff);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.container {
+  background: rgba(255 255 255 / 0.1);
+  padding: 40px 35px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 60px rgba(255 255 255 / 0.15);
+  backdrop-filter: blur(12px);
+  animation: slideFadeIn 0.9s ease forwards;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255 255 255 / 0.6);
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0 0 0 / 0.2);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-shadow: 0 0 8px rgba(0 0 0 / 0.15);
+}
+
+.btn-link {
+  background: rgba(255 255 255 / 0.25);
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #00e5ff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  background-color: #00e5ff;
+  color: #003344;
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px #00e5ff,
+    0 0 30px #00e5ff;
+  outline: none;
+}
+
+.btn-link svg.icon {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  transition: stroke 0.3s ease;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  .btn-link {
+    font-size: 0.9rem;
+    padding: 7px 12px;
+  }
+}
